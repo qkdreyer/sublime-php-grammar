@@ -791,6 +791,9 @@ contexts:
     - match: '(?i)\*\s+(\@[a-z0-9_-]+)\s'
       captures:
         1: keyword.other.phpdoc.php
+    - match: '(?i)\*\s+@[\w\\]*?(\w+)[\(\w\)"''=,\\\s]*\s'
+      captures:
+        1: keyword.annotation.phpdoc.php
   regex-double-quoted:
     - match: '(?x)"/ (?= (\\.|[^"/])+/[imsxADSUXJu]*" )'
       scope: punctuation.definition.string.begin.php
